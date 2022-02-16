@@ -1,18 +1,18 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS.Legacy_Refactored
 {
     public class ECS
     {
         private int _threshold;
-        private readonly TempSensor _tempSensor; // Problem
-        private readonly Heater _heater; // Problem
+        private readonly ITempSensor _tempSensor; 
+        private readonly IHeater _heater; 
 
-        public ECS(int thr)
+        public ECS(int thr, ITempSensor temps, IHeater heat)
         {
             SetThreshold(thr);
-            _tempSensor = new TempSensor();
-            _heater = new Heater();
+            _tempSensor = temps;
+            _heater = heat;
         }
 
         public void Regulate()

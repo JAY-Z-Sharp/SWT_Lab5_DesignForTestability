@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS.Legacy_Refactored
 {
-    internal class TempSensor
+    internal class TempSensor : ITempSensor
     {
         private Random gen = new Random();
 
