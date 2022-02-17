@@ -19,12 +19,8 @@ namespace ECS_test
             testHeater = new FakeHeater();
         }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
-
+    
+  
         [TestCase(20, 40, 3)]
 
         public void regulate_turnOff_returnAmountOfCalls(int thres, int temp, int result)
