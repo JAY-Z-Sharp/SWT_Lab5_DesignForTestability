@@ -23,12 +23,7 @@ namespace ECS_test
         [TestCase(1000, 0)]
         [TestCase(-9, 0)]
 
-        public void divide_divideByZero_returnThrows(int a, int b)
-        {
-            //Assert
-            Assert.That(() => testCalc.Divide(a, b), Throws.TypeOf<DivideByZeroException>());
-        }
-
+  
         [TestCase(20, 40, 3)]
 
         public void regulate_turnOff_returnAmountOfCalls(int thres, int temp, int result)
