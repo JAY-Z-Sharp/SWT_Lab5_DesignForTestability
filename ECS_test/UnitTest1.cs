@@ -19,10 +19,7 @@ namespace ECS_test
             FakeHeater testHeater = new FakeHeater();
         }
 
-        [TestCase(10, 0)]
-        [TestCase(1000, 0)]
-        [TestCase(-9, 0)]
-
+    
   
         [TestCase(20, 40, 3)]
 
