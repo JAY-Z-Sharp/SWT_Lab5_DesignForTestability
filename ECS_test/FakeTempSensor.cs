@@ -9,16 +9,21 @@ namespace ECS_test
 {
     public class FakeTempSensor : ITempSensor
     {
-     
+        public void setTemp(int temp)
+        {
+            Temperature = temp;
+        }
+        
         private Random gen = new Random();
 
         public int GetTempNumber = 0;
+        private int Temperature = 0;
         public int RunSelfTestNumber = 0;
 
         public int GetTemp()
         {
             ++GetTempNumber;
-            return 1;
+            return Temperature;
         }
 
         public bool RunSelfTest()
