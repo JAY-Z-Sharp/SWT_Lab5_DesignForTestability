@@ -15,8 +15,8 @@ namespace ECS_test
         public void Setup()
         {
             //testECS = new ECS.Legacy_Refactored.ECS(23, new FakeTempSensor(), new FakeHeater());
-            FakeTempSensor testTempSensor = new FakeTempSensor();
-            FakeHeater testHeater = new FakeHeater();
+            testTempSensor = new FakeTempSensor();
+            testHeater = new FakeHeater();
         }
 
         [Test]
@@ -31,9 +31,9 @@ namespace ECS_test
         {
             //act
 
-            testECS = new ECS.Legacy_Refactored.ECS(thres, testTempSensor, testHeater);
-
             testTempSensor.setTemp(temp);
+
+            testECS = new ECS.Legacy_Refactored.ECS(thres, testTempSensor, testHeater);
 
             for (int i = 0; i < result; i++)
             {
