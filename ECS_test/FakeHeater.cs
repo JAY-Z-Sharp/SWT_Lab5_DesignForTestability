@@ -9,23 +9,23 @@ namespace ECS_test
 {
     public class FakeHeater : IHeater
     {
-        public int turnOnCounter;
-        public int turnOffCounter;
-        public int selfTestCounter;
+        public int TurnOnCounter { get; set; }
+        public int TurnOffCounter { get; set; }
+        public int SelfTestCounter { get; set; }
 
         public void TurnOn()
         {
-            turnOnCounter++;
+            TurnOnCounter++;
         }
 
         public void TurnOff()
         {
-            turnOffCounter++;
+            TurnOffCounter++;
         }
 
         public bool RunSelfTest()
         {
-            selfTestCounter++;
+            SelfTestCounter++;
             return true;
         }
     }
