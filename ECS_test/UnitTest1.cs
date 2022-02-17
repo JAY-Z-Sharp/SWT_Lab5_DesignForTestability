@@ -14,10 +14,14 @@ namespace ECS_test
             testECS = new ECS.Legacy_Refactored.ECS(23, new FakeTempSensor(), new FakeHeater());
         }
 
-        [Test]
-        public void Test1()
+        [TestCase(10, 0)]
+        [TestCase(1000, 0)]
+        [TestCase(-9, 0)]
+
+        public void divide_divideByZero_returnThrows(int a, int b)
         {
-            Assert.Pass();
+            //Assert
+            Assert.That(() => testCalc.Divide(a, b), Throws.TypeOf<DivideByZeroException>());
         }
     }
 }

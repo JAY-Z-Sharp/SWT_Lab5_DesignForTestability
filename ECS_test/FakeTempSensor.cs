@@ -17,8 +17,8 @@ namespace ECS_test
 
         public int GetTemp()
         {
-            ++GetTempNumber;
-            return 1;
+            
+            return ++GetTempNumber;
         }
 
         public bool RunSelfTest()
