@@ -21,9 +21,11 @@ namespace ECS_test
 
     
   
-        [TestCase(20, 40, 3)]
+        [TestCase(20, 40, 3, 3)]
+        [TestCase(20, 40, 10, 10)]
+        [TestCase(40, 20, 0, 10)]
 
-        public void regulate_turnOff_returnAmountOfCalls(int thres, int temp, int result)
+        public void regulate_turnOff_returnAmountOfCalls(int thres, int temp, int result, int loop)
         {
             //act
 
@@ -31,7 +33,7 @@ namespace ECS_test
 
             testECS = new ECS.Legacy_Refactored.ECS(thres, testTempSensor, testHeater);
 
-            for (int i = 0; i < result; i++)
+            for (int i = 0; i < loop; i++)
             {
                 testECS.Regulate();
             }
